@@ -3,7 +3,7 @@ Feature: Sign in
 
     Background: Navigate to https://www.megarush.com/en
         Given I navigate to  megarush casino and accept cookies
-        And I click on Login in button
+        When I click on Login in button
 
     Scenario: Positive scenario
         Given I login with valid credentials
@@ -18,5 +18,5 @@ Feature: Sign in
     
     Scenario: Login with empty credentials Application Service
         When I Login with empty credentials
-        When I click on Sign in button
+        And I click on Sign in button
         Then I should see Wrong login or password error message

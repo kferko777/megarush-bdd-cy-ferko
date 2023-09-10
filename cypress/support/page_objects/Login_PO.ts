@@ -2,16 +2,16 @@
 import * as CONFIG from '../../../cypress.config'
 import { Base_PO } from './Base_PO'
 
-export class Login_PO {
+export class Login_PO extends Base_PO{
 	visit() {
 		cy.visit(Cypress.env('url'))
 	}
 
-  clickOn_SignIn_Button() {
+	clickOn_SignIn_Button() {
 		const button = cy.get("button[type='submit']")
-    button.click({ force: true })
+		button.click({ force: true })
 	}
-
+	
 	type_Username(value) {
 		const field = cy.get('#email').click({ force: true })
 		field.clear()
@@ -48,6 +48,4 @@ export class Login_PO {
 			timeout: 10000,
 		})
 	}
-
-  
 }

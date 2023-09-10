@@ -12,3 +12,5 @@ Given('I navigate to  megarush casino and accept cookies', () => {
 Given('I click on Login in button', () => {
 	welcome_PO.loginButton()
 })
+
+
