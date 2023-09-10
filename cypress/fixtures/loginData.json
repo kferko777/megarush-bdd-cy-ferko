@@ -1,0 +1,13 @@
+{
+  "username": "write your password",
+	"password": "write your username",
+
+  "invalidusername": "talent@soltechnol.com",
+  "invalidpassword": "wrongpassword",
+
+  "emptyusername": " ",
+	"emptypassword": " "
+
+	
+  
+}

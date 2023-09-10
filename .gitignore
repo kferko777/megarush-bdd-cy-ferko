@@ -64,4 +64,4 @@ cypress/reports/html/index.html
 cypress/downloads
 
 # fixtures
-cypress/fixtures/loginData.json
+# uncomment this line to gitgnore also credentials cypress/fixtures/loginData.json
