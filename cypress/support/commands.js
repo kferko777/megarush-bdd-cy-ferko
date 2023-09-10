@@ -1,11 +1,13 @@
+///<reference types="cypress" />
 import './commands'
 require('cypress-iframe')
 require('cypress-xpath')
-import * as LoginData from '../fixtures/loginData'
 
-Cypress.Commands.add(
-	'loginData',
-	function (
+import { Login_PO } from './page_objects/Login_PO'
+
+const login_PO = new Login_PO ()
+
+Cypress.Commands.add('loginData', function (
 		username,
 		password,
 		invalidusername,
@@ -13,13 +15,13 @@ Cypress.Commands.add(
 		emptyusername,
 		emptypassword
 	) {
-		loginPage.visit()
-		loginPage.fillUsername(username)
-		loginPage.fillPassword(password)
-		loginPage.fillUsername(invalidusername)
-		loginPage.fillPassword(invalidpassword)
-		loginPage.fillUsername(emptyusername)
-		loginPage.fillPassword(emptypassword)
+		login_PO.visit()
+		login_PO.type_Username(username)
+		login_PO.type_Password(password)
+		login_PO.type_Username(invalidusername)
+		login_PO.type_Password(invalidpassword)
+		login_PO.type_Username(emptyusername)
+		login_PO.type_Password(emptypassword)
 	}
 )
 

@@ -8,6 +8,4 @@ export class Base_PO {
 	loginButton() {
 		cy.get('.buttons > magic-ui-button:nth-of-type(2)').click({ force: true })
 	}
-
-  
 }

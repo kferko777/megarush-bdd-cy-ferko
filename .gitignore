@@ -59,6 +59,8 @@ allure-results
 cypress/reports
 cypress/reports/html/index.html
 
+#screenshots
+cypress/screenshots
 
 #Downloads
 cypress/downloads
